@@ -11,6 +11,8 @@
             <block name="zero-store-locator-link" template="Zero_StorePickup::footer-link.phtml">
                 <arguments>
                     <argument name="stores" xsi:type="object">Zero\StorePickup\ViewModel\Stores</argument>
+                    <!-- Whether the website has pickup stores asks MSI four queries; once an hour is enough. -->
+                    <argument name="cache_lifetime" xsi:type="number">3600</argument>
                 </arguments>
             </block>
         </referenceBlock>
